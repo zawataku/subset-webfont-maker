@@ -1,0 +1,20 @@
+[project]
+name = "subset-webfont-maker"
+version = "0.1.0"
+description = "任意の OTF/TTF を Noto Sans JP 互換の unicode-range 分割で最適化する Web フォント生成 GUI"
+readme = "README.md"
+authors = [
+    { name = "zawataku", email = "mail@zawataku.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "brotli>=1.2.0",
+    "fonttools>=4.63.0",
+]
+
+[project.scripts]
+subset-webfont-maker = "subset_webfont_maker:main"
+
+[build-system]
+requires = ["uv_build>=0.11.17,<0.12.0"]
+build-backend = "uv_build"
